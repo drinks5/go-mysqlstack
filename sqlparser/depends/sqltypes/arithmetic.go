@@ -10,9 +10,9 @@ import (
 	"math"
 	"strconv"
 
+	"github.com/drinks5/go-mysqlstack/sqlparser/depends/common"
+	querypb "github.com/drinks5/go-mysqlstack/sqlparser/depends/query"
 	"github.com/shopspring/decimal"
-	"github.com/xelabs/go-mysqlstack/sqlparser/depends/common"
-	querypb "github.com/xelabs/go-mysqlstack/sqlparser/depends/query"
 )
 
 // numeric represents a numeric value extracted from

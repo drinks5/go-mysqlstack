@@ -14,9 +14,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xelabs/go-mysqlstack/sqlparser/depends/common"
+	"github.com/drinks5/go-mysqlstack/sqlparser/depends/common"
 
-	querypb "github.com/xelabs/go-mysqlstack/sqlparser/depends/query"
+	querypb "github.com/drinks5/go-mysqlstack/sqlparser/depends/query"
 )
 
 var (

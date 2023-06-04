@@ -12,10 +12,10 @@ package proto
 import (
 	"testing"
 
+	"github.com/drinks5/go-mysqlstack/sqldb"
 	"github.com/stretchr/testify/assert"
-	"github.com/xelabs/go-mysqlstack/sqldb"
 
-	"github.com/xelabs/go-mysqlstack/sqlparser/depends/common"
+	"github.com/drinks5/go-mysqlstack/sqlparser/depends/common"
 )
 
 func TestGreetingUnPack(t *testing.T) {

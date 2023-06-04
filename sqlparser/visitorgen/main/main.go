@@ -25,8 +25,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/xelabs/go-mysqlstack/sqlparser/visitorgen"
-	"github.com/xelabs/go-mysqlstack/xlog"
+	"github.com/drinks5/go-mysqlstack/sqlparser/visitorgen"
+	"github.com/drinks5/go-mysqlstack/xlog"
 )
 
 var (

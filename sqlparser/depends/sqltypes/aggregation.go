@@ -9,8 +9,8 @@
 package sqltypes
 
 import (
-	"github.com/xelabs/go-mysqlstack/sqlparser/depends/common"
-	querypb "github.com/xelabs/go-mysqlstack/sqlparser/depends/query"
+	"github.com/drinks5/go-mysqlstack/sqlparser/depends/common"
+	querypb "github.com/drinks5/go-mysqlstack/sqlparser/depends/query"
 )
 
 // AggrType type.

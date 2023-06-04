@@ -7,7 +7,7 @@ package sqltypes
 import (
 	"fmt"
 
-	querypb "github.com/xelabs/go-mysqlstack/sqlparser/depends/query"
+	querypb "github.com/drinks5/go-mysqlstack/sqlparser/depends/query"
 )
 
 // This file provides wrappers and support

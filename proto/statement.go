@@ -12,10 +12,10 @@ package proto
 import (
 	"fmt"
 
-	"github.com/xelabs/go-mysqlstack/sqldb"
-	"github.com/xelabs/go-mysqlstack/sqlparser/depends/common"
-	querypb "github.com/xelabs/go-mysqlstack/sqlparser/depends/query"
-	"github.com/xelabs/go-mysqlstack/sqlparser/depends/sqltypes"
+	"github.com/drinks5/go-mysqlstack/sqldb"
+	"github.com/drinks5/go-mysqlstack/sqlparser/depends/common"
+	querypb "github.com/drinks5/go-mysqlstack/sqlparser/depends/query"
+	"github.com/drinks5/go-mysqlstack/sqlparser/depends/sqltypes"
 )
 
 // Statement -- stmt struct.

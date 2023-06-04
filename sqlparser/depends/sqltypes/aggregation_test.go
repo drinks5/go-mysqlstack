@@ -11,8 +11,8 @@ package sqltypes
 import (
 	"testing"
 
+	querypb "github.com/drinks5/go-mysqlstack/sqlparser/depends/query"
 	"github.com/stretchr/testify/assert"
-	querypb "github.com/xelabs/go-mysqlstack/sqlparser/depends/query"
 )
 
 func TestNewAggregation(t *testing.T) {

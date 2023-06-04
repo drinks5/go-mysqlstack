@@ -17,12 +17,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xelabs/go-mysqlstack/proto"
-	"github.com/xelabs/go-mysqlstack/sqldb"
-	"github.com/xelabs/go-mysqlstack/sqlparser/depends/common"
-	querypb "github.com/xelabs/go-mysqlstack/sqlparser/depends/query"
-	"github.com/xelabs/go-mysqlstack/sqlparser/depends/sqltypes"
-	"github.com/xelabs/go-mysqlstack/xlog"
+	"github.com/drinks5/go-mysqlstack/proto"
+	"github.com/drinks5/go-mysqlstack/sqldb"
+	"github.com/drinks5/go-mysqlstack/sqlparser/depends/common"
+	querypb "github.com/drinks5/go-mysqlstack/sqlparser/depends/query"
+	"github.com/drinks5/go-mysqlstack/sqlparser/depends/sqltypes"
+	"github.com/drinks5/go-mysqlstack/xlog"
 )
 
 // Handler interface.

@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"strings"
 
-	querypb "github.com/xelabs/go-mysqlstack/sqlparser/depends/query"
+	querypb "github.com/drinks5/go-mysqlstack/sqlparser/depends/query"
 )
 
 // timeToNumeric used to cast time type to numeric.

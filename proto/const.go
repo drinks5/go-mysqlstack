@@ -10,7 +10,7 @@
 package proto
 
 import (
-	"github.com/xelabs/go-mysqlstack/sqldb"
+	"github.com/drinks5/go-mysqlstack/sqldb"
 )
 
 const (
@@ -28,7 +28,7 @@ const (
 		sqldb.CLIENT_DEPRECATE_EOF |
 		sqldb.CLIENT_SECURE_CONNECTION
 
-		// DefaultClientCapability is the default client capability.
+	// DefaultClientCapability is the default client capability.
 	DefaultClientCapability = sqldb.CLIENT_LONG_PASSWORD |
 		sqldb.CLIENT_LONG_FLAG |
 		sqldb.CLIENT_PROTOCOL_41 |
