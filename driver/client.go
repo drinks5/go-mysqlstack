@@ -47,11 +47,26 @@ type Conn interface {
 	ComStatementPrepare(sql string) (*Statement, error)
 }
 
+type clientOption struct {
+	// 最大packet大小
+	packetMaxSize int
+}
+
+type ClientOption func(*clientOption)
+
+// 删除表
+func WithPacketMaxSize(packetMaxSize int) ClientOption {
+	return func(option *clientOption) {
+		option.packetMaxSize = packetMaxSize
+	}
+}
+
 type conn struct {
-	netConn  net.Conn
-	auth     *proto.Auth
-	greeting *proto.Greeting
-	packets  *packet.Packets
+	netConn       net.Conn
+	auth          *proto.Auth
+	greeting      *proto.Greeting
+	packets       *packet.Packets
+	packetMaxSize int
 }
 
 func (c *conn) handleErrorPacket(data []byte) error {
@@ -128,8 +143,13 @@ func (c *conn) handShake(username, password, database, charset string) error {
 
 // NewConn used to create a new client connection.
 // The timeout is 30 seconds.
-func NewConn(username, password, address, database, charset string) (Conn, error) {
+func NewConn(username, password, address, database, charset string, opts ...ClientOption) (Conn, error) {
 	var err error
+	var o clientOption
+
+	for _, opt := range opts {
+		opt(&o)
+	}
 	c := &conn{}
 	timeout := time.Duration(30) * time.Second
 	if c.netConn, err = net.DialTimeout("tcp", address, timeout); err != nil {
@@ -155,7 +175,11 @@ func NewConn(username, password, address, database, charset string) (Conn, error
 
 	c.auth = proto.NewAuth()
 	c.greeting = proto.NewGreeting(0, "")
-	c.packets = packet.NewPackets(c.netConn)
+	if o.packetMaxSize > 0 {
+		c.packets = packet.NewPacketsWithMaxSize(c.netConn, o.packetMaxSize)
+	} else {
+		c.packets = packet.NewPackets(c.netConn)
+	}
 	if err = c.handShake(username, password, database, charset); err != nil {
 		return nil, err
 	}

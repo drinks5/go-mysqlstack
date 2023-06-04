@@ -45,6 +45,12 @@ func NewPackets(c net.Conn) *Packets {
 	}
 }
 
+func NewPacketsWithMaxSize(c net.Conn, packetMaxSize int) *Packets {
+	return &Packets{
+		stream: NewStream(c, packetMaxSize),
+	}
+}
+
 // Next used to read the next packet.
 func (p *Packets) Next() ([]byte, error) {
 	pkt, err := p.stream.Read()
